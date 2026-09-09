@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace EmployeeManagementApp
 {
@@ -18,7 +19,7 @@ namespace EmployeeManagementApp
                 HourlyRate = 230.69M
             };
 
-            Console.WriteLine($"{fullTimeEmployee.EmployeeName} in {fullTimeEmployee.Department} earned R{fullTimeEmployee.CalculateMonthlyPay()}");
+            Console.WriteLine($"{fullTimeEmployee.EmployeeName} in {fullTimeEmployee.Department} earned {fullTimeEmployee.CalculateMonthlyPay().ToString("C")}");
 
             var partTimeEmployee = new PartTimeEmployeeModel
             {
@@ -28,7 +29,7 @@ namespace EmployeeManagementApp
                 HourlyRate = 125.56M
             };
 
-            Console.WriteLine($"{partTimeEmployee.EmployeeName} in {partTimeEmployee.Department} earned R{partTimeEmployee.CalculateMonthlyPay()}");
+            Console.WriteLine($"{partTimeEmployee.EmployeeName} in {partTimeEmployee.Department} earned {partTimeEmployee.CalculateMonthlyPay().ToString("C")}");
 
             var contractor = new ContractorModel
             {
@@ -38,7 +39,7 @@ namespace EmployeeManagementApp
                 HourlyRate = 86.89M,
                 HoursWorked = 35
             };
-            Console.WriteLine($"{contractor.EmployeeName} in {contractor.Department} has worked {contractor.HoursWorked} hours and earned R{contractor.CalculateMonthlyPay()}");
+            Console.WriteLine($"{contractor.EmployeeName} in {contractor.Department} has worked {contractor.HoursWorked} hours and earned {contractor.CalculateMonthlyPay().ToString("C")}");
 
         }
     }
