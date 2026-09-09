@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IEmployable.cs" />
     <Compile Include="Models\ContractorModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\FullTimeEmployeeModel.cs" />
